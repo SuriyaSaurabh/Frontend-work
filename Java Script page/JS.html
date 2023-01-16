@@ -1,0 +1,102 @@
+<html>
+
+<Head>
+    <link rel="stylesheet" href="js.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</Head>
+
+<body>
+    <div id="accordion">
+        <div class="accord">
+            <div class="accord-head">
+                <h1>According Heading 1</h1>
+                <span class="fas fa-plus-circle"></span>
+            </div>
+            <div class="accord-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, molestiae harum, alias quos
+                    laborumsed, neque vitae rerum sint tenetur magnam obcaecati temporibus repellendus. Vitae nesciunt
+                    recusandae nisi itaque numquam.</p>
+            </div>
+        </div>
+
+        <div class="accord">
+            <div class="accord-head">
+                <h1>According Heading 2</h1>
+                <span class="fas fa-plus-circle"></span>
+            </div>
+            <div class="accord-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, molestiae harum, alias quos
+                    laborumsed, neque vitae rerum sint tenetur magnam obcaecati temporibus repellendus. Vitae nesciunt
+                    recusandae nisi itaque numquam.</p>
+            </div>
+        </div>
+
+        <div class="accord">
+            <div class="accord-head">
+                <h1>According Heading 3</h1>
+                <span class="fas fa-plus-circle"></span>
+            </div>
+            <div class="accord-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, molestiae harum, alias quos
+                    laborumsed, neque vitae rerum sint tenetur magnam obcaecati temporibus repellendus. Vitae nesciunt
+                    recusandae nisi itaque numquam.</p>
+            </div>
+        </div>
+
+        <div class="accord">
+            <div class="accord-head">
+                <h1>According Heading 4</h1>
+                <span class="fas fa-plus-circle"></span>
+            </div>
+            <div class="accord-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, molestiae harum, alias quos
+                    laborumsed, neque vitae rerum sint tenetur magnam obcaecati temporibus repellendus. Vitae nesciunt
+                    recusandae nisi itaque numquam.</p>
+            </div>
+        </div>
+    </div>
+                                <!-- java script impliment  -->
+    <script>
+        let spans = document.querySelectorAll('span')  //span tag h direct use kro 
+        spans.forEach((ele) => {
+            //console.log(ele)
+            ele.onclick = (currentelement) => {
+                console.log(currentelement)
+                if (currentelement.target.classList.contains("fa-plus-circle")) {
+                    currentelement.target.parentElement.nextElementSibling.style.display = "block";
+                    currentelement.target.classList.remove("fa-plus-circle")
+                    currentelement.target.classList.add("fa-minus-circle")
+
+                    // if {
+
+                    //     else{
+
+                    //     }
+                    // }
+
+                }
+                else {
+                    currentelement.target.parentElement.nextElementSibling.style.display = "none";
+                    currentelement.target.classList.remove("fa-minus-circle")
+                    currentelement.target.classList.add("fa-plus-circle")
+
+
+                }
+
+            }
+
+            // ele.onclick = (currentelement) => {
+            //     console.log(currentelement)
+            //     if (currentelement.target.classList.contains("fa-minus-circle")) {
+            //         currentelement.target.parentElement.nextElementSibling.style.display = "block";
+            //         currentelement.target.classList.remove("fa-minus-circle")
+            //         currentelement.target.classList.add("fa-plus-circle")
+            //     }
+            // }
+        })
+        //console.log(spans)
+    </script>
+
+</body>
+
+</html>
