@@ -1,0 +1,98 @@
+* {
+    /* margin: 0px; */
+    padding: 0px;
+    /* border: 1px solid red; */
+}
+
+#master {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+#master .image {
+    width: 30%;
+    height: 300px;
+    margin: 5px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#master .image img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#master .image:hover img {
+    transform: scale(2);
+}
+
+#master .image:before {
+    content: "DOREMON";
+    color: white;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    transition: left 1s 1s;
+}
+
+#master .image:hover:before{
+    left: 0;
+}
+
+/* #master .image #icon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right:-100px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 1s 1s;
+} */
+
+
+#master .image .icon{
+    position:absolute;
+    width:100%;
+    height:100%;
+    right:-100%;
+    top:40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* transition-property: right;
+    transition-duration: 1s;
+    transition-delay: 1s; */
+    transition:right 1s 1s;
+    z-index:3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 3rem;
+    color: white; */
+    /* margin: 2rem; */
+    /* padding:1rem; */
+    
+}
+
+
+#master .image .icon i{
+    font-size: 3rem;
+    color: white;
+    margin:1rem;
+    /* padding:1rem; */
+}
+
+#master .image:hover .icon{
+    right:0;
+}
